@@ -1253,6 +1253,8 @@ function syncCatalogRows_(payload) {
   }
 
   return { added, status: getStudentStatus_({ ciclo_lectivo: ciclo, id_estudiante: idEst }) };
+}
+
 function getDivisionRiskSummary_(payload) {
   const ciclo = String(payload.ciclo_lectivo || '').trim();
   const umbral = (payload.umbral !== undefined) ? Number(payload.umbral) : 5;
