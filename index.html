@@ -22,7 +22,7 @@
         <option value="2025">2025</option>
         <option value="2024">2024</option>
       </select>
-      <button id="btnRollover" class="btn ghost">Crear ciclo nuevo</button>
+      <button id="btnRollover" class="btn ghost danger">Crear ciclo nuevo</button>
       <button id="btnDivisionSummary" class="btn ghost">Resumen por división</button>
       <button id="btnRefresh" class="btn ghost">Actualizar</button>
       <button id="btnLogout" class="btn ghost">Cambiar clave</button>
@@ -330,6 +330,41 @@
           <button id="btnSaveCierre" class="btn primary" disabled>Guardar cierre</button>
         </div>
         <div id="cierreMsg" class="msg"></div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal: Orientación (3º -> 4º) al crear ciclo nuevo -->
+    <div id="modalRolloverOrient" class="modal hidden" aria-hidden="true">
+      <div class="modal-backdrop" id="modalRolloverOrientBackdrop"></div>
+      <div class="modal-card">
+        <div class="modal-head">
+          <h2>Orientación para 4º</h2>
+          <button id="btnCloseRolloverOrient" class="btn ghost" type="button">Cerrar</button>
+        </div>
+
+        <p id="rolloverOrientInfo" class="muted"></p>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Estudiante</th>
+                <th>División</th>
+                <th>Orientación</th>
+              </tr>
+            </thead>
+            <tbody id="rolloverOrientTbody"></tbody>
+          </table>
+        </div>
+
+        <div class="row end gap" style="margin-top:12px">
+          <button id="btnCancelRolloverOrient" class="btn ghost" type="button">Cancelar</button>
+          <button id="btnConfirmRolloverOrient" class="btn primary" type="button">Continuar</button>
+        </div>
+
+        <div id="rolloverOrientMsg" class="msg"></div>
       </div>
     </div>
 
